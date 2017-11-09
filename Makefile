@@ -1,6 +1,14 @@
 
+$(NAME):
 
-test:
-	@gcc -w -o run_test src/$(TARGET).c __test__/utils.c __test__/$(TARGET).c
-	@exec ./run_test
-	@rm ./run_test
+all:
+	gcc -Wall -Wextra -Werror -c ft_*.c
+	ar rc libft.a *.o
+
+clean:
+	rm -rf *.o
+
+fclean: clean
+	rm -rf libft.a
+
+re: fclean all
