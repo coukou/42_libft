@@ -1,23 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_strnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: spopieul <spopieul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/09 14:56:24 by spopieul          #+#    #+#             */
-/*   Updated: 2017/11/09 23:38:43 by spopieul         ###   ########.fr       */
+/*   Created: 2017/11/09 23:56:58 by spopieul          #+#    #+#             */
+/*   Updated: 2017/11/09 23:59:17 by spopieul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *b, int c, size_t len)
+char    *ft_strnew(size_t size)
 {
-	void *ret;
-
-	ret = b;
-	while (len--)
-		*(unsigned char*)b++ = c;
-	return ret;
+    return (char*)ft_memalloc(size);
 }

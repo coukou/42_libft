@@ -6,7 +6,7 @@
 /*   By: spopieul <spopieul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 20:35:33 by spopieul          #+#    #+#             */
-/*   Updated: 2017/11/09 20:56:28 by spopieul         ###   ########.fr       */
+/*   Updated: 2017/11/09 23:49:32 by spopieul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 void	ft_memdel(void **ap)
 {
-	if (ap[0] != NULL)
+	if (*ap != NULL)
 	{
-		ap[0] = NULL;
-		free(ap[0]);
+		free(*ap);
+		*ap = NULL;
 	}
 }

@@ -1,23 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_strclr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: spopieul <spopieul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/09 14:56:24 by spopieul          #+#    #+#             */
-/*   Updated: 2017/11/09 23:38:43 by spopieul         ###   ########.fr       */
+/*   Created: 2017/11/10 00:03:44 by spopieul          #+#    #+#             */
+/*   Updated: 2017/11/10 00:37:06 by spopieul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-void	*ft_memset(void *b, int c, size_t len)
+void    ft_strclr(char *s)
 {
-	void *ret;
-
-	ret = b;
-	while (len--)
-		*(unsigned char*)b++ = c;
-	return ret;
+    while (*s)
+        *s++ = '\0';
 }

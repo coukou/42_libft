@@ -1,23 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_strmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: spopieul <spopieul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/09 14:56:24 by spopieul          #+#    #+#             */
-/*   Updated: 2017/11/09 23:38:43 by spopieul         ###   ########.fr       */
+/*   Created: 2017/11/10 00:18:07 by spopieul          #+#    #+#             */
+/*   Updated: 2017/11/10 00:39:34 by spopieul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *b, int c, size_t len)
+char    *ft_strmap(char *s, char (*f)(char))
 {
-	void *ret;
+    size_t i;
+    char *n;
 
-	ret = b;
-	while (len--)
-		*(unsigned char*)b++ = c;
-	return ret;
+    i = -1;
+    n = ft_strnew(ft_strlen(s));
+    while (s[++i])
+        n[i] = f(s[i]);
+    return (n);
 }
