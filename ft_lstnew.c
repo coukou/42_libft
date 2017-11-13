@@ -1,34 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: spopieul <spopieul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/10 14:29:07 by spopieul          #+#    #+#             */
-/*   Updated: 2017/11/11 16:24:52 by spopieul         ###   ########.fr       */
+/*   Created: 2017/11/12 18:18:44 by spopieul          #+#    #+#             */
+/*   Updated: 2017/11/12 18:47:16 by spopieul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int		isblank(int c)
+t_list	*ft_lstnew(void *content, size_t content_size)
 {
-	return (c == ' ' || c == '\t' || c == '\n');
-}
+	t_list *n;
 
-char			*ft_strtrim(char *s)
-{
-	size_t len;
-
-	if (s == NULL)
+	n = (t_list*)ft_memalloc(sizeof(*n));
+	if (n == NULL)
 		return (NULL);
-	while (isblank(*s) && *s)
-		s++;
-	if (*s == '\0')
-		return (s);
-	len = ft_strlen(s);
-	while (isblank(s[--len]))
-		;
-	return (ft_strsub(s, 0, len + 1));
+	if (content != NULL)
+	{
+		n->content = ft_memalloc(content_size);
+		if (n->content == NULL)
+			return (NULL);
+		ft_memcpy(n->content, content, content_size);
+		n->content_size = content_size;
+	}
+	else
+	{
+		n->content = NULL;
+		n->content_size = 0;
+	}
+	n->next = NULL;
+	return (n);
 }

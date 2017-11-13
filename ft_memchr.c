@@ -6,7 +6,7 @@
 /*   By: spopieul <spopieul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 17:04:22 by spopieul          #+#    #+#             */
-/*   Updated: 2017/11/09 19:53:15 by spopieul         ###   ########.fr       */
+/*   Updated: 2017/11/11 15:38:17 by spopieul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	*ft_memchr(void *s, int c, size_t len)
 {
-	size_t i;
-	unsigned char *sptr;
+	size_t			i;
+	unsigned char	*sptr;
 
 	i = -1;
 	sptr = (unsigned char*)s;

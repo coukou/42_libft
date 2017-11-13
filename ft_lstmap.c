@@ -1,34 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: spopieul <spopieul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/10 14:29:07 by spopieul          #+#    #+#             */
-/*   Updated: 2017/11/11 16:24:52 by spopieul         ###   ########.fr       */
+/*   Created: 2017/11/13 00:05:07 by spopieul          #+#    #+#             */
+/*   Updated: 2017/11/13 06:52:18 by spopieul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int		isblank(int c)
+t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 {
-	return (c == ' ' || c == '\t' || c == '\n');
-}
+	t_list *backptr;
+	t_list *back;
+	t_list *tmp;
 
-char			*ft_strtrim(char *s)
-{
-	size_t len;
-
-	if (s == NULL)
+	if (lst == NULL)
 		return (NULL);
-	while (isblank(*s) && *s)
-		s++;
-	if (*s == '\0')
-		return (s);
-	len = ft_strlen(s);
-	while (isblank(s[--len]))
-		;
-	return (ft_strsub(s, 0, len + 1));
+	back = NULL;
+	while (lst)
+	{
+		tmp = f(lst);
+		if (tmp != NULL && back == NULL)
+		{
+			back = tmp;
+			backptr = back;
+		}
+		else if (tmp != NULL)
+		{
+			back->next = tmp;
+			back = back->next;
+		}
+		lst = lst->next;
+	}
+	return (backptr);
 }

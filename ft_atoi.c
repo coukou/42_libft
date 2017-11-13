@@ -6,7 +6,7 @@
 /*   By: spopieul <spopieul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 11:43:58 by spopieul          #+#    #+#             */
-/*   Updated: 2017/11/09 19:48:50 by spopieul         ###   ########.fr       */
+/*   Updated: 2017/11/11 15:21:12 by spopieul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int		ft_atoi(char *str)
 
 	res = 0;
 	n = 1;
-	while (*str == 32 || *str == '\t' || *str == '\n' || *str == '\v' || *str == '\f' || *str == '\r')
+	while (ft_isspace(*str))
 		str++;
 	if (*str == '-')
 		n = -n;

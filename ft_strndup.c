@@ -1,34 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*   ft_strndup.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: spopieul <spopieul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/10 14:29:07 by spopieul          #+#    #+#             */
-/*   Updated: 2017/11/11 16:24:52 by spopieul         ###   ########.fr       */
+/*   Created: 2017/11/13 06:32:21 by spopieul          #+#    #+#             */
+/*   Updated: 2017/11/13 07:19:23 by spopieul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int		isblank(int c)
+char	*ft_strndup(char *str, size_t len)
 {
-	return (c == ' ' || c == '\t' || c == '\n');
-}
+	char *dup;
 
-char			*ft_strtrim(char *s)
-{
-	size_t len;
-
-	if (s == NULL)
+	dup = ft_strnew(len);
+	if (dup == NULL)
 		return (NULL);
-	while (isblank(*s) && *s)
-		s++;
-	if (*s == '\0')
-		return (s);
-	len = ft_strlen(s);
-	while (isblank(s[--len]))
-		;
-	return (ft_strsub(s, 0, len + 1));
+	while (len--)
+		dup[len] = str[len];
+	return (dup);
 }

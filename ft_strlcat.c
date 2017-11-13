@@ -1,34 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: spopieul <spopieul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/10 14:29:07 by spopieul          #+#    #+#             */
-/*   Updated: 2017/11/11 16:24:52 by spopieul         ###   ########.fr       */
+/*   Created: 2017/11/10 19:40:05 by spopieul          #+#    #+#             */
+/*   Updated: 2017/11/13 05:36:07 by spopieul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int		isblank(int c)
+size_t	ft_strlcat(char *dst, char *src, size_t size)
 {
-	return (c == ' ' || c == '\t' || c == '\n');
-}
+	size_t	offset;
+	size_t	slen;
+	int		left;
 
-char			*ft_strtrim(char *s)
-{
-	size_t len;
-
-	if (s == NULL)
-		return (NULL);
-	while (isblank(*s) && *s)
-		s++;
-	if (*s == '\0')
-		return (s);
-	len = ft_strlen(s);
-	while (isblank(s[--len]))
-		;
-	return (ft_strsub(s, 0, len + 1));
+	offset = ft_strlen(dst);
+	slen = ft_strlen(src);
+	left = size - offset;
+	while (*src && left > 1 && left--)
+		*((dst++) + offset) = *(src++);
+	*(dst + offset) = '\0';
+	return (left > 0 ? (offset + slen) : (size + slen));
 }

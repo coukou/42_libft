@@ -1,34 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*   ft_isspace.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: spopieul <spopieul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/10 14:29:07 by spopieul          #+#    #+#             */
-/*   Updated: 2017/11/11 16:24:52 by spopieul         ###   ########.fr       */
+/*   Created: 2017/11/11 15:20:32 by spopieul          #+#    #+#             */
+/*   Updated: 2017/11/11 15:27:09 by spopieul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-static int		isblank(int c)
+int		ft_isspace(int c)
 {
-	return (c == ' ' || c == '\t' || c == '\n');
-}
-
-char			*ft_strtrim(char *s)
-{
-	size_t len;
-
-	if (s == NULL)
-		return (NULL);
-	while (isblank(*s) && *s)
-		s++;
-	if (*s == '\0')
-		return (s);
-	len = ft_strlen(s);
-	while (isblank(s[--len]))
-		;
-	return (ft_strsub(s, 0, len + 1));
+	return (c == 32 || c == '\t' || c == '\n' || c == '\v' ||
+			c == '\f' || c == '\r');
 }

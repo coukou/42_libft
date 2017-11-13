@@ -6,7 +6,7 @@
 /*   By: spopieul <spopieul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 19:57:14 by spopieul          #+#    #+#             */
-/*   Updated: 2017/11/09 18:40:15 by spopieul         ###   ########.fr       */
+/*   Updated: 2017/11/11 15:40:43 by spopieul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,5 @@ char	*ft_strcpy(char *dest, char *src)
 		i++;
 	}
 	dest[i] = '\0';
-	return dest;
+	return (dest);
 }

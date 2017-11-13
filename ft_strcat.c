@@ -6,7 +6,7 @@
 /*   By: spopieul <spopieul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 20:00:06 by spopieul          #+#    #+#             */
-/*   Updated: 2017/11/09 20:06:39 by spopieul         ###   ########.fr       */
+/*   Updated: 2017/11/11 15:39:49 by spopieul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,5 @@ char	*ft_strcat(char *s1, char *s2)
 		i++;
 	}
 	s1[offset + i] = '\0';
-	return s1;
+	return (s1);
 }

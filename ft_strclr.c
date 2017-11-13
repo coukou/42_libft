@@ -6,12 +6,15 @@
 /*   By: spopieul <spopieul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 00:03:44 by spopieul          #+#    #+#             */
-/*   Updated: 2017/11/10 00:37:06 by spopieul         ###   ########.fr       */
+/*   Updated: 2017/11/11 16:07:04 by spopieul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void    ft_strclr(char *s)
+#include "libft.h"
+
+void	ft_strclr(char *s)
 {
-    while (*s)
-        *s++ = '\0';
+	if (s != NULL)
+		while (*s)
+			*s++ = '\0';
 }

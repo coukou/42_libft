@@ -6,14 +6,15 @@
 /*   By: spopieul <spopieul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 00:06:24 by spopieul          #+#    #+#             */
-/*   Updated: 2017/11/10 00:08:52 by spopieul         ###   ########.fr       */
+/*   Updated: 2017/11/11 15:53:04 by spopieul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    ft_striteri(char *s, void (*f)(char *))
+void	ft_striter(char *s, void (*f)(char *))
 {
-    while (*s)
-        f(&(*s++));
+	if (s != NULL)
+		while (*s)
+			f(&(*s++));
 }
