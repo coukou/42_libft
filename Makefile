@@ -1,5 +1,9 @@
 
-NAME =	libft.a
+NAME = libft.a
+CC = gcc
+
+CFLAGS = -Wall -Wextra -Werror -c
+
 SRCS = 	ft_abs.c ft_atoi.c ft_bzero.c ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c ft_isprint.c \
 		ft_isspace.c ft_itoa.c ft_lstadd.c ft_lstdel.c ft_lstdelone.c ft_lstiter.c ft_lstmap.c ft_lstnew.c \
 		ft_memalloc.c ft_memccpy.c ft_memchr.c ft_memcmp.c ft_memcpy.c ft_memdel.c ft_memmove.c ft_memset.c \
@@ -9,10 +13,12 @@ SRCS = 	ft_abs.c ft_atoi.c ft_bzero.c ft_isalnum.c ft_isalpha.c ft_isascii.c ft_
 		ft_strmapi.c ft_strncat.c ft_strncmp.c ft_strncpy.c ft_strndup.c ft_strnequ.c ft_strnew.c ft_strnstr.c \
 		ft_strrchr.c ft_strrev.c ft_strsplit.c ft_strstr.c ft_strsub.c ft_strtrim.c ft_tolower.c ft_toupper.c
 
+OBJS = $(SRCS:.c=.o)
 
 $(NAME):
-	gcc -Wall -Wextra -Werror -c $(SRCS)
-	ar rc libft.a *.o
+	$(CC) $(CFLAGS) $(SRCS)
+	ar rc $(NAME) $(OBJS)
+	ranlib $(NAME)
 
 all: $(NAME)
 

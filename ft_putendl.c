@@ -6,7 +6,7 @@
 /*   By: spopieul <spopieul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 17:27:07 by spopieul          #+#    #+#             */
-/*   Updated: 2017/11/12 18:49:44 by spopieul         ###   ########.fr       */
+/*   Updated: 2017/11/14 23:54:08 by spopieul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,5 +16,6 @@ void	ft_putendl(char *s)
 {
 	if (s == NULL)
 		return ;
-	ft_putstr(ft_strjoin(s, "\n"));
+	ft_putstr(s);
+	ft_putchar('\n');
 }
