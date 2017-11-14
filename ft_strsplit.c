@@ -6,7 +6,7 @@
 /*   By: spopieul <spopieul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 15:18:10 by spopieul          #+#    #+#             */
-/*   Updated: 2017/11/14 17:25:12 by spopieul         ###   ########.fr       */
+/*   Updated: 2017/11/14 17:32:05 by spopieul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ static size_t	count_words(const char *s, char c)
 	return (words);
 }
 
-char **ft_strsplit(const char *s, char c)
+char			**ft_strsplit(const char *s, char c)
 {
 	size_t	words;
 	size_t	len;

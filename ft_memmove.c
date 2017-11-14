@@ -6,7 +6,7 @@
 /*   By: spopieul <spopieul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 15:42:12 by spopieul          #+#    #+#             */
-/*   Updated: 2017/11/14 17:06:46 by spopieul         ###   ########.fr       */
+/*   Updated: 2017/11/14 21:11:43 by spopieul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,9 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	void *ret;
+	void *tmp[len];
 
-	ret = dst;
-	if (dst < src)
-		while ((size_t)(dst - ret) < len)
-			*((unsigned char*)dst++) = *((unsigned char*)src++);
-	else
-		ft_memcpy(dst, src, len);
+	ft_memcpy(tmp, src, len);
+	ft_memcpy(dst, tmp, len);
 	return (dst);
 }

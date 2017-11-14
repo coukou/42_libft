@@ -6,7 +6,7 @@
 /*   By: spopieul <spopieul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 14:29:07 by spopieul          #+#    #+#             */
-/*   Updated: 2017/11/14 17:23:31 by spopieul         ###   ########.fr       */
+/*   Updated: 2017/11/14 18:39:32 by spopieul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,9 @@ char			*ft_strtrim(const char *s)
 	while (isblank(*s) && *s)
 		s++;
 	if (*s == '\0')
-		return ((char*)s);
+		return (ft_strdup(s));
 	len = ft_strlen(s);
 	while (isblank(s[--len]))
 		;
-	return (ft_strsub(s, 0, len + 1));
+	return (ft_strndup(s, len + 1));
 }

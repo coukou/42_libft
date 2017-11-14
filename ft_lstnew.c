@@ -6,13 +6,13 @@
 /*   By: spopieul <spopieul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/12 18:18:44 by spopieul          #+#    #+#             */
-/*   Updated: 2017/11/12 18:47:16 by spopieul         ###   ########.fr       */
+/*   Updated: 2017/11/14 17:52:26 by spopieul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstnew(void *content, size_t content_size)
+t_list	*ft_lstnew(const void *content, size_t content_size)
 {
 	t_list *n;
 
