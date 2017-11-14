@@ -6,7 +6,7 @@
 /*   By: spopieul <spopieul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 19:42:55 by spopieul          #+#    #+#             */
-/*   Updated: 2017/11/15 00:01:10 by spopieul         ###   ########.fr       */
+/*   Updated: 2017/11/15 00:13:52 by spopieul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,7 @@ void				ft_putstr(char *s);
 void				ft_putchar_fd(char c, int fd);
 void				ft_putstr_fd(char *s, int fd);
 void				ft_putnbr_fd(int n, int fd);
+void				ft_putendl(char *s, int fd);
 size_t				ft_intlen(int n);
 size_t				ft_strlen(const char *str);
 size_t				ft_strlenc(const char *str, int c);
