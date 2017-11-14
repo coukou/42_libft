@@ -6,13 +6,13 @@
 /*   By: spopieul <spopieul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 01:05:09 by spopieul          #+#    #+#             */
-/*   Updated: 2017/11/11 16:15:55 by spopieul         ###   ########.fr       */
+/*   Updated: 2017/11/14 17:22:54 by spopieul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strsub(char *s, unsigned int start, size_t len)
+char	*ft_strsub(const char *s, unsigned int start, size_t len)
 {
 	char *ret;
 

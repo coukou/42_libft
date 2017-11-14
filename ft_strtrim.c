@@ -6,7 +6,7 @@
 /*   By: spopieul <spopieul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 14:29:07 by spopieul          #+#    #+#             */
-/*   Updated: 2017/11/11 16:24:52 by spopieul         ###   ########.fr       */
+/*   Updated: 2017/11/14 17:23:31 by spopieul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ static int		isblank(int c)
 	return (c == ' ' || c == '\t' || c == '\n');
 }
 
-char			*ft_strtrim(char *s)
+char			*ft_strtrim(const char *s)
 {
 	size_t len;
 
@@ -26,7 +26,7 @@ char			*ft_strtrim(char *s)
 	while (isblank(*s) && *s)
 		s++;
 	if (*s == '\0')
-		return (s);
+		return ((char*)s);
 	len = ft_strlen(s);
 	while (isblank(s[--len]))
 		;

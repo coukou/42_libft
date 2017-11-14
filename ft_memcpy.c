@@ -6,13 +6,13 @@
 /*   By: spopieul <spopieul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 15:05:46 by spopieul          #+#    #+#             */
-/*   Updated: 2017/11/10 19:09:28 by spopieul         ###   ########.fr       */
+/*   Updated: 2017/11/14 17:15:34 by spopieul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dst, void *src, size_t n)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
 	while (n--)
 		((unsigned char*)dst)[n] = ((unsigned char*)src)[n];
