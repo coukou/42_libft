@@ -1,6 +1,8 @@
 
 NAME = libft.a
 CC = gcc
+INCLUDES = includes/
+IFLAGS = -I $(INCLUDES)
 
 CFLAGS = -Wall -Wextra -Werror -c
 
@@ -16,7 +18,7 @@ SRCS = 	ft_abs.c ft_atoi.c ft_bzero.c ft_isalnum.c ft_isalpha.c ft_isascii.c ft_
 OBJS = $(SRCS:.c=.o)
 
 $(NAME):
-	$(CC) $(CFLAGS) $(SRCS)
+	$(CC) $(CFLAGS) $(SRCS) $(IFLAGS)
 	ar rc $(NAME) $(OBJS)
 	ranlib $(NAME)
 
