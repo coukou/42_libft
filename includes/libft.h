@@ -6,7 +6,7 @@
 /*   By: spopieul <spopieul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 19:42:55 by spopieul          #+#    #+#             */
-/*   Updated: 2017/11/15 00:17:44 by spopieul         ###   ########.fr       */
+/*   Updated: 2017/11/19 19:50:13 by spopieul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,6 +80,7 @@ int					ft_isalnum(int c);
 int					ft_isascii(int c);
 int					ft_isprint(int c);
 int					ft_isspace(int c);
+int					ft_isin(int c, unsigned char *charset);
 int					ft_toupper(int c);
 int					ft_tolower(int c);
 
