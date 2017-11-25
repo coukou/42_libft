@@ -6,13 +6,13 @@
 /*   By: spopieul <spopieul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/25 00:59:57 by spopieul          #+#    #+#             */
-/*   Updated: 2017/11/25 01:01:44 by spopieul         ###   ########.fr       */
+/*   Updated: 2017/11/25 01:06:31 by spopieul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strjoin_free(char *s1, char *s2)
+char	*ft_strjoin_free(const char *s1, const char *s2)
 {
 	char *out;
 

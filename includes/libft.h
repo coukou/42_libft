@@ -6,7 +6,7 @@
 /*   By: spopieul <spopieul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 19:42:55 by spopieul          #+#    #+#             */
-/*   Updated: 2017/11/19 19:50:13 by spopieul         ###   ########.fr       */
+/*   Updated: 2017/11/25 01:06:52 by spopieul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,7 @@ int					ft_strequ(const char *s1, const char *s2);
 int					ft_strnequ(const char *s1, const char *s2, size_t n);
 char				*ft_strsub(const char *s, unsigned int start, size_t len);
 char				*ft_strjoin(const char *s1, const char *s2);
+char				*ft_strjoin_free(const char *s1, const char *s2);
 char				*ft_strtrim(const char *s);
 char				**ft_strsplit(const char *s, char c);
 char				*ft_strrev(char *s);
@@ -60,6 +61,7 @@ size_t				ft_strlen(const char *str);
 size_t				ft_strlenc(const char *str, int c);
 char				*ft_strdup(const char *str);
 char				*ft_strndup(const char *str, size_t len);
+char				*ft_strdupc(const char *str, int);
 char				*ft_strcpy(char *dest, const char *src);
 char				*ft_strncpy(char *dest, const char *src, size_t len);
 char				*ft_strcat(char *s1, char *s2);
