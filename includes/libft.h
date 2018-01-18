@@ -6,7 +6,7 @@
 /*   By: spopieul <spopieul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 19:42:55 by spopieul          #+#    #+#             */
-/*   Updated: 2017/11/25 01:06:52 by spopieul         ###   ########.fr       */
+/*   Updated: 2018/01/18 15:17:28 by spopieul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,15 @@
 
 # include <unistd.h>
 # include <stdlib.h>
+
+typedef struct		s_cb
+{
+	void			*buf;
+	void			*end;
+	size_t			content_size;
+	void			*head;
+	void			*tail;
+}					t_cb;
 
 typedef struct		s_list
 {
@@ -61,7 +70,7 @@ size_t				ft_strlen(const char *str);
 size_t				ft_strlenc(const char *str, int c);
 char				*ft_strdup(const char *str);
 char				*ft_strndup(const char *str, size_t len);
-char				*ft_strdupc(const char *str, int);
+char				*ft_strdupc(const char *str, int c);
 char				*ft_strcpy(char *dest, const char *src);
 char				*ft_strncpy(char *dest, const char *src, size_t len);
 char				*ft_strcat(char *s1, char *s2);
@@ -85,6 +94,10 @@ int					ft_isspace(int c);
 int					ft_isin(int c, unsigned char *charset);
 int					ft_toupper(int c);
 int					ft_tolower(int c);
+
+void				ft_cb_read(t_cb *cb, void *data, size_t size);
+void				ft_cb_write(t_cb *cb, void *data, size_t size);
+t_cb				*ft_cb_new(size_t size);
 
 t_list				*ft_lstnew(const void *content, size_t content_size);
 void				ft_lstdelone(t_list **alst, void (*del)(void*, size_t));

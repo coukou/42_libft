@@ -1,22 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_cb_new.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: spopieul <spopieul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/09 15:42:12 by spopieul          #+#    #+#             */
-/*   Updated: 2018/01/18 15:18:12 by spopieul         ###   ########.fr       */
+/*   Created: 2018/01/18 15:07:51 by spopieul          #+#    #+#             */
+/*   Updated: 2018/01/18 15:10:40 by spopieul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+# include "libft.h"
 
-void	*ft_memmove(void *dst, const void *src, size_t len)
+t_cb	*ft_cb_new(size_t size)
 {
-	char tmp[len][len];
+	t_cb *cb;
 
-	ft_memcpy(tmp, src, len);
-	ft_memcpy(dst, tmp, len);
-	return (dst);
+	if (!(cb = ft_memalloc(sizeof(*cb))))
+		return (NULL);
+	if (!(cb->buf = ft_memalloc(size)))
+		return (NULL);
+	cb->end = cb->buf + size;
+	cb->content_size = 0;
+	cb->head = cb->buf;
+	cb->tail = cb->buf;
 }
