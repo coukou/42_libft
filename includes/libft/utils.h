@@ -1,27 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_cb_new.c                                        :+:      :+:    :+:   */
+/*   utils.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: spopieul <spopieul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/01/18 15:07:51 by spopieul          #+#    #+#             */
-/*   Updated: 2018/01/18 15:24:57 by spopieul         ###   ########.fr       */
+/*   Created: 2018/02/09 20:31:04 by spopieul          #+#    #+#             */
+/*   Updated: 2018/02/09 20:31:58 by spopieul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#ifndef LIBFT_UTILS_H
+# define LIBFT_UTILS_H
 
-t_cb	*ft_cb_new(size_t size)
-{
-	t_cb *cb;
+# include <stdlib.h>
 
-	if (!(cb = ft_memalloc(sizeof(*cb))))
-		return (NULL);
-	if (!(cb->buf = ft_memalloc(size)))
-		return (NULL);
-	cb->end = cb->buf + size;
-	cb->content_size = 0;
-	cb->head = cb->buf;
-	cb->tail = cb->buf;
-}
+size_t	ft_nbrlen(long long n, int base);
+
+#endif

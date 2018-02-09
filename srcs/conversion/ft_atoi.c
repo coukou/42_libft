@@ -1,16 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_abs.c                                           :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: spopieul <spopieul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/10 16:58:34 by spopieul          #+#    #+#             */
-/*   Updated: 2017/11/15 00:04:54 by spopieul         ###   ########.fr       */
+/*   Created: 2017/11/09 11:43:58 by spopieul          #+#    #+#             */
+/*   Updated: 2018/02/09 20:38:00 by spopieul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-unsigned int	ft_abs(int n)
+#include "libft.h"
+
+int		ft_atoi(const char *str)
 {
-	return (n < 0 ? -n : n);
+	return (ft_atoi_base(str, 10));
 }

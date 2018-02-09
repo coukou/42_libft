@@ -1,20 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isin.c                                          :+:      :+:    :+:   */
+/*   ft_strtolower.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: spopieul <spopieul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/19 19:50:36 by spopieul          #+#    #+#             */
-/*   Updated: 2017/11/19 19:53:14 by spopieul         ###   ########.fr       */
+/*   Created: 2018/02/09 21:25:00 by spopieul          #+#    #+#             */
+/*   Updated: 2018/02/09 21:34:28 by spopieul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_isin(int c, unsigned char *charset)
+static void		iter_tolower(char *s)
 {
-	while (*charset && *charset != c && charset++)
-		;
-	return (*charset != '\0');
+	*s = ft_tolower(*s);
+}
+
+char			*ft_strtolower(char *str)
+{
+	ft_striter(str, &iter_tolower);
+	return (str);
 }

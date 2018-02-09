@@ -1,21 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   char.h                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: spopieul <spopieul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/08 19:42:55 by spopieul          #+#    #+#             */
-/*   Updated: 2018/02/09 20:32:03 by spopieul         ###   ########.fr       */
+/*   Created: 2018/02/09 16:50:28 by spopieul          #+#    #+#             */
+/*   Updated: 2018/02/09 16:51:06 by spopieul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "libft/cb.h"
-# include "libft/char.h"
-# include "libft/conversion.h"
-# include "libft/list.h"
-# include "libft/math.h"
-# include "libft/memory.h"
-# include "libft/output.h"
-# include "libft/string.h"
-# include "libft/utils.h"
+#ifndef LIBFT_CHAR_H
+# define LIBFT_CHAR_H
+
+int		ft_isalpha(int c);
+int		ft_isdigit(int c);
+int		ft_isalnum(int c);
+int		ft_isascii(int c);
+int		ft_isprint(int c);
+int		ft_isspace(int c);
+int		ft_isin(int c, unsigned char *charset);
+int		ft_toupper(int c);
+int		ft_tolower(int c);
+
+
+#endif

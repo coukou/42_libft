@@ -1,44 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_cb_new.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: spopieul <spopieul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/10 16:36:27 by spopieul          #+#    #+#             */
-/*   Updated: 2017/11/15 00:05:08 by spopieul         ###   ########.fr       */
+/*   Created: 2018/01/18 15:07:51 by spopieul          #+#    #+#             */
+/*   Updated: 2018/02/09 17:14:02 by spopieul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t	intlen(int n)
+t_cb	*ft_cb_new(size_t size)
 {
-	size_t i;
+	t_cb *cb;
 
-	i = (n < 0) ? 2 : 1;
-	while (n /= 10)
-		i++;
-	return (i);
-}
-
-char			*ft_itoa(int n)
-{
-	unsigned int	un;
-	size_t			len;
-	char			*ret;
-
-	un = ft_abs(n);
-	len = intlen(n);
-	ret = ft_strnew(len);
-	if (ret == NULL)
+	if (!(cb = ft_memalloc(sizeof(*cb))))
 		return (NULL);
-	while (len--)
-	{
-		ret[len] = '0' + un % 10;
-		un /= 10;
-	}
-	if (n < 0)
-		ret[0] = '-';
-	return (ret);
+	if (!(cb->buf = ft_memalloc(size)))
+		return (NULL);
+	cb->end = cb->buf + size;
+	cb->content_size = 0;
+	cb->head = cb->buf;
+	cb->tail = cb->buf;
+	return (cb);
 }

@@ -1,35 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   math.h                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: spopieul <spopieul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/09 11:43:58 by spopieul          #+#    #+#             */
-/*   Updated: 2017/11/14 17:12:16 by spopieul         ###   ########.fr       */
+/*   Created: 2018/02/09 16:55:59 by spopieul          #+#    #+#             */
+/*   Updated: 2018/02/09 16:56:34 by spopieul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#ifndef LIBFT_MATH_H
+# define LIBFT_MATH_H
 
-int		ft_atoi(const char *str)
-{
-	int res;
-	int n;
+# define ft_abs(x) (x < 0) ? -x : x
 
-	res = 0;
-	n = 1;
-	while (ft_isspace(*str))
-		str++;
-	if (*str == '-')
-		n = -n;
-	if (*str == '-' || *str == '+')
-		str++;
-	while (ft_isdigit(*str))
-	{
-		res *= 10;
-		res += *str - '0';
-		str++;
-	}
-	return (res * n);
-}
+#endif
