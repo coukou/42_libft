@@ -1,18 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_wstrdup.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: spopieul <spopieul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/09 11:43:58 by spopieul          #+#    #+#             */
-/*   Updated: 2018/02/10 13:30:16 by spopieul         ###   ########.fr       */
+/*   Created: 2018/02/10 14:00:35 by spopieul          #+#    #+#             */
+/*   Updated: 2018/02/10 14:17:50 by spopieul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft/unicode.h"
+#include "libft/memory.h"
+#include <stdlib.h>
 
-int		ft_atoi(const char *str)
+wchar_t	*ft_wstrdup(const wchar_t *wstr)
 {
-	return ((int)ft_atoll(str, 10));
+	wchar_t *cpy;
+	size_t size;
+
+	size = ft_wstrlen(wstr);
+	cpy = (wchar_t*)ft_memalloc(sizeof(*cpy) * (size + 1));
+	if (!cpy)
+		return (NULL);
+	cpy = ft_memcpy(cpy, wstr, sizeof(*cpy) * size);
+	return (cpy);
 }

@@ -17,8 +17,8 @@ OFILES += $(addprefix char/, \
 )
 
 OFILES += $(addprefix conversion/, \
-	ft_atoi_base.o ft_atoi.o ft_itoa.o ft_lltoa.o \
-	ft_ulltoa.o \
+	ft_atoll.o ft_atoi.o ft_itoa.o ft_lltoa.o \
+	ft_ulltoa.o ft_wctoa.o ft_wstrtoa.o ft_wstrtoa_n.o \
 )
 
 OFILES += $(addprefix list/, \
@@ -52,6 +52,9 @@ OFILES += $(addprefix string/, \
 	ft_strtolower.o ft_strtoupper.o \
 )
 
+OFILES += $(addprefix unicode/, \
+	ft_wclen.o ft_wstrlen.o ft_wstrdup.o ft_wstrndup.o \
+)
 OFILES += $(addprefix utils/, \
 	ft_nbrlen.o \
 )

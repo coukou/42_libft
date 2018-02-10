@@ -1,18 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_wstrlen.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: spopieul <spopieul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/09 11:43:58 by spopieul          #+#    #+#             */
-/*   Updated: 2018/02/10 13:30:16 by spopieul         ###   ########.fr       */
+/*   Created: 2018/02/10 13:39:37 by spopieul          #+#    #+#             */
+/*   Updated: 2018/02/10 14:09:10 by spopieul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+# include <wchar.h>
+# include <stdlib.h>
 
-int		ft_atoi(const char *str)
+size_t	ft_wstrlen(const wchar_t *wstr)
 {
-	return ((int)ft_atoll(str, 10));
+	int i;
+
+	i = -1;
+	while (wstr[++i])
+		;
+	return (i);
 }

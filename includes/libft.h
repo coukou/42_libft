@@ -6,7 +6,7 @@
 /*   By: spopieul <spopieul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 19:42:55 by spopieul          #+#    #+#             */
-/*   Updated: 2018/02/09 20:32:03 by spopieul         ###   ########.fr       */
+/*   Updated: 2018/02/10 14:17:01 by spopieul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,4 +18,5 @@
 # include "libft/memory.h"
 # include "libft/output.h"
 # include "libft/string.h"
+# include "libft/unicode.h"
 # include "libft/utils.h"

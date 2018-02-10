@@ -1,18 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_wclen.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: spopieul <spopieul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/09 11:43:58 by spopieul          #+#    #+#             */
-/*   Updated: 2018/02/10 13:30:16 by spopieul         ###   ########.fr       */
+/*   Created: 2018/02/10 13:34:44 by spopieul          #+#    #+#             */
+/*   Updated: 2018/02/10 13:44:14 by spopieul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+# include <libft/unicode.h>
+# include <wchar.h>
+# include <stdlib.h>
 
-int		ft_atoi(const char *str)
+size_t	ft_wclen(wchar_t c)
 {
-	return ((int)ft_atoll(str, 10));
+	if (c >= WCHAR_1_MIN && c <= WCHAR_1_MAX)
+		return (1);
+	else if (c >= WCHAR_2_MIN && c <= WCHAR_2_MAX)
+		return (2);
+	else if (c >= WCHAR_3_MIN && c <= WCHAR_3_MAX)
+		return (3);
+	else if (c >= WCHAR_4_MIN && c <= WCHAR_4_MAX)
+		return (4);
+	else
+		return (0);
 }
