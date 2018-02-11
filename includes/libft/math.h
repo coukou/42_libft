@@ -6,13 +6,13 @@
 /*   By: spopieul <spopieul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/09 16:55:59 by spopieul          #+#    #+#             */
-/*   Updated: 2018/02/09 16:56:34 by spopieul         ###   ########.fr       */
+/*   Updated: 2018/02/11 12:21:59 by spopieul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_MATH_H
 # define LIBFT_MATH_H
 
-# define ft_abs(x) (x < 0) ? -x : x
+# define FT_ABS(x) (x < 0) ? -x : x
 
 #endif

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi_base.c                                     :+:      :+:    :+:   */
+/*   ft_atoll.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: spopieul <spopieul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/09 14:26:35 by spopieul          #+#    #+#             */
-/*   Updated: 2018/02/10 13:29:21 by spopieul         ###   ########.fr       */
+/*   Updated: 2018/02/11 12:29:31 by spopieul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,10 @@ long long	ft_atoll(const char *str, int base)
 		n = -n;
 	if (*str == '-' || *str == '+')
 		str++;
-	while ((cvalue = ft_strfind(FT_CHAR_BASE, ft_toupper(*str))) > -1 && cvalue < base)
+	while ((cvalue = ft_strfind(FT_CHAR_BASE, ft_toupper(*str))) > -1)
 	{
+		if (cvalue >= base)
+			break ;
 		res *= base;
 		res += cvalue;
 		str++;

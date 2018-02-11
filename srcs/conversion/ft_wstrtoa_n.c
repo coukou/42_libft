@@ -6,7 +6,7 @@
 /*   By: spopieul <spopieul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/10 14:28:33 by spopieul          #+#    #+#             */
-/*   Updated: 2018/02/10 15:39:40 by spopieul         ###   ########.fr       */
+/*   Updated: 2018/02/11 12:30:34 by spopieul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@
 
 static size_t	get_final_size(const wchar_t *wstr, size_t max)
 {
-	int i;
-	size_t len;
-	size_t wc_len;
+	int		i;
+	size_t	len;
+	size_t	wc_len;
 
 	i = -1;
 	len = 0;
@@ -33,13 +33,13 @@ static size_t	get_final_size(const wchar_t *wstr, size_t max)
 	return (len);
 }
 
-char	*ft_wstrtoa_n(const wchar_t *wstr, size_t n)
+char			*ft_wstrtoa_n(const wchar_t *wstr, size_t n)
 {
-	char *str;
-	int i;
-	size_t size;
-	size_t offset;
-	size_t wc_len;
+	char	*str;
+	int		i;
+	size_t	size;
+	size_t	offset;
+	size_t	wc_len;
 
 	size = get_final_size(wstr, n);
 	str = ft_strnew(size);

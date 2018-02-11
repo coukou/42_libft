@@ -6,14 +6,14 @@
 /*   By: spopieul <spopieul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/10 14:35:50 by spopieul          #+#    #+#             */
-/*   Updated: 2018/02/10 15:06:59 by spopieul         ###   ########.fr       */
+/*   Updated: 2018/02/11 12:28:33 by spopieul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft/unicode.h"
 #include "libft/string.h"
 
-static char     *wctoa_1(wchar_t wc)
+static char		*wctoa_1(wchar_t wc)
 {
 	char *ret;
 
@@ -22,7 +22,7 @@ static char     *wctoa_1(wchar_t wc)
 	return (ret);
 }
 
-static char    *wctoa_2(wchar_t wc)
+static char		*wctoa_2(wchar_t wc)
 {
 	char *ret;
 
@@ -32,7 +32,7 @@ static char    *wctoa_2(wchar_t wc)
 	return (ret);
 }
 
-static char    *wctoa_3(wchar_t wc)
+static char		*wctoa_3(wchar_t wc)
 {
 	char *ret;
 
@@ -43,7 +43,7 @@ static char    *wctoa_3(wchar_t wc)
 	return (ret);
 }
 
-static char     *wctoa_4(wchar_t wc)
+static char		*wctoa_4(wchar_t wc)
 {
 	char *ret;
 
@@ -55,7 +55,7 @@ static char     *wctoa_4(wchar_t wc)
 	return (ret);
 }
 
-char            *ft_wctoa(wchar_t wc)
+char			*ft_wctoa(wchar_t wc)
 {
 	int wlen;
 

@@ -6,11 +6,11 @@
 /*   By: spopieul <spopieul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/09 20:28:23 by spopieul          #+#    #+#             */
-/*   Updated: 2018/02/09 20:55:01 by spopieul         ###   ########.fr       */
+/*   Updated: 2018/02/11 12:33:04 by spopieul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include <stdlib.h>
+#include <stdlib.h>
 
 size_t	ft_nbrlen(long long n, int base)
 {

@@ -1,24 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strfind.c                                       :+:      :+:    :+:   */
+/*   ft_isblank.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: spopieul <spopieul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/02/09 14:30:13 by spopieul          #+#    #+#             */
-/*   Updated: 2018/02/11 12:31:08 by spopieul         ###   ########.fr       */
+/*   Created: 2018/02/11 12:26:01 by spopieul          #+#    #+#             */
+/*   Updated: 2018/02/11 12:26:17 by spopieul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-int		ft_strfind(const char *str, int c)
+int		ft_isblank(int c)
 {
-	int i;
-
-	i = -1;
-	while (str[++i])
-		if (str[i] == c)
-			return (i);
-	return (-1);
+	return (c == ' ' || c == '\t' || c == '\n');
 }

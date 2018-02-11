@@ -6,13 +6,13 @@
 /*   By: spopieul <spopieul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/10 13:34:44 by spopieul          #+#    #+#             */
-/*   Updated: 2018/02/10 13:44:14 by spopieul         ###   ########.fr       */
+/*   Updated: 2018/02/11 12:31:38 by spopieul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include <libft/unicode.h>
-# include <wchar.h>
-# include <stdlib.h>
+#include <libft/unicode.h>
+#include <wchar.h>
+#include <stdlib.h>
 
 size_t	ft_wclen(wchar_t c)
 {
