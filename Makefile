@@ -14,7 +14,7 @@ OFILES += $(addprefix cb/, \
 OFILES += $(addprefix char/, \
 	ft_isalnum.o ft_isalpha.o ft_isascii.o ft_isdigit.o \
 	ft_isprint.o ft_isspace.o ft_tolower.o ft_toupper.o \
-	ft_isblank.o \
+	ft_isblank.o ft_isupper.o ft_islower.o \
 )
 
 OFILES += $(addprefix conversion/, \

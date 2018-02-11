@@ -6,13 +6,15 @@
 /*   By: spopieul <spopieul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 13:08:18 by spopieul          #+#    #+#             */
-/*   Updated: 2017/11/09 19:33:43 by spopieul         ###   ########.fr       */
+/*   Updated: 2018/02/11 18:31:17 by spopieul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft/char.h"
+
 int		ft_toupper(int c)
 {
-	if (c >= 'a' && c <= 'z')
-		c -= 32;
+	if (ft_islower(c))
+		c -= FT_LOWER_UPPER_DIFF;
 	return (c);
 }
