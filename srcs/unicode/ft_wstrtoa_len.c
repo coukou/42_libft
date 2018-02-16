@@ -1,24 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtolower.c                                    :+:      :+:    :+:   */
+/*   ft_wstrtoa_len.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: spopieul <spopieul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/02/09 21:25:00 by spopieul          #+#    #+#             */
-/*   Updated: 2018/02/13 17:28:33 by spopieul         ###   ########.fr       */
+/*   Created: 2018/02/13 11:19:28 by spopieul          #+#    #+#             */
+/*   Updated: 2018/02/13 11:23:07 by spopieul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft/unicode.h"
 
-static void		iter_tolower(char *s)
+size_t	ft_wstrtoa_len(const wchar_t *wstr)
 {
-	*s = ft_tolower(*s);
-}
+	int		i;
+	size_t	len;
 
-char			*ft_strtolower(char *str)
-{
-	ft_striter(str, &iter_tolower);
-	return (str);
+	i = -1;
+	len = 0;
+	while (wstr[++i])
+		len += ft_wclen(wstr[i]);
+	return (len);
 }
