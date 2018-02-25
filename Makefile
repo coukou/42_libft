@@ -23,8 +23,8 @@ OFILES += $(addprefix conversion/, \
 )
 
 OFILES += $(addprefix list/, \
-	ft_lstadd.o ft_lstdel.o ft_lstdelone.o ft_lstiter.o \
-	ft_lstmap.o ft_lstnew.o ft_lst_mergesort.o \
+	ft_lstadd.o ft_lstadd_back.o ft_lstdel.o ft_lstdelone.o \
+	ft_lstiter.o ft_lstmap.o ft_lstnew.o ft_lst_mergesort.o \
 )
 
 OFILES += $(addprefix math/, \
@@ -39,6 +39,12 @@ OFILES += $(addprefix memory/, \
 OFILES += $(addprefix output/, \
 	ft_putchar.o ft_putchar_fd.o ft_putendl.o ft_putendl_fd.o \
 	ft_putnbr.o ft_putnbr_fd.o ft_putstr.o ft_putstr_fd.o \
+)
+
+OFILES += $(addprefix printf/, \
+	buffer.o color.o convert.o format.o \
+	format2.o ft_printf.o parse.o utils.o \
+	write.o \
 )
 
 OFILES += $(addprefix string/, \
@@ -57,6 +63,7 @@ OFILES += $(addprefix unicode/, \
 	ft_wclen.o ft_wstrlen.o ft_wstrdup.o ft_wstrndup.o \
 	ft_wstrndup.o ft_wstrtoa_len.o ft_wstrtoa_len_n.o \
 )
+
 OFILES += $(addprefix utils/, \
 	ft_nbrlen.o \
 )
