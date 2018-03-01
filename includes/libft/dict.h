@@ -1,20 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   math.h                                             :+:      :+:    :+:   */
+/*   dict.h                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: orenkay <orenkay@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/02/09 16:55:59 by spopieul          #+#    #+#             */
-/*   Updated: 2018/03/01 12:25:05 by orenkay          ###   ########.fr       */
+/*   Created: 2018/02/27 12:11:12 by orenkay           #+#    #+#             */
+/*   Updated: 2018/02/27 12:22:49 by orenkay          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_MATH_H
-# define LIBFT_MATH_H
+#ifndef FT_DICT_H
+# define FT_DICT_H
 
-# define FT_ABS(x) ((x < 0) ? -x : x)
-# define FT_MAX(v1, v2) ((v1 >= v2) ? v1 : v2)
-# define FT_MIN(v1, v2) ((v1 >= v2) ? v2 : v1)
+typedef struct		s_dict
+{
+	char			*key;
+	void 			*value;
+	struct s_dict	*next;
+}					t_dict;
+
+void	*ft_dict_get(t_dict *dict, char *key);
+void	ft_dict_del(t_dict **dict, char *key, void *value);
+void	ft_dict_set(t_dict **dict, char *key, void *value);
 
 #endif

@@ -1,20 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   math.h                                             :+:      :+:    :+:   */
+/*   ft_dict_get.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: orenkay <orenkay@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/02/09 16:55:59 by spopieul          #+#    #+#             */
-/*   Updated: 2018/03/01 12:25:05 by orenkay          ###   ########.fr       */
+/*   Created: 2018/02/27 12:14:19 by orenkay           #+#    #+#             */
+/*   Updated: 2018/02/27 12:40:40 by orenkay          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_MATH_H
-# define LIBFT_MATH_H
+#include "libft/dict.h"
+#include "libft/string.h"
 
-# define FT_ABS(x) ((x < 0) ? -x : x)
-# define FT_MAX(v1, v2) ((v1 >= v2) ? v1 : v2)
-# define FT_MIN(v1, v2) ((v1 >= v2) ? v2 : v1)
-
-#endif
+void	*ft_dict_get(t_dict *dict, char *key)
+{
+	while (dict)
+	{
+		if (ft_strequ(dict->key, key))
+			return (dict->value);
+		dict = dict->next;
+	}
+	return (NULL);
+}

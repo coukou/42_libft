@@ -1,20 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   math.h                                             :+:      :+:    :+:   */
+/*   ft_lstpop.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: orenkay <orenkay@student.42.fr>            +#+  +:+       +#+        */
+/*   By: spopieul <spopieul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/02/09 16:55:59 by spopieul          #+#    #+#             */
-/*   Updated: 2018/03/01 12:25:05 by orenkay          ###   ########.fr       */
+/*   Created: 2018/02/28 14:36:08 by spopieul          #+#    #+#             */
+/*   Updated: 2018/02/28 14:47:23 by spopieul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_MATH_H
-# define LIBFT_MATH_H
+#include "libft/list.h"
 
-# define FT_ABS(x) ((x < 0) ? -x : x)
-# define FT_MAX(v1, v2) ((v1 >= v2) ? v1 : v2)
-# define FT_MIN(v1, v2) ((v1 >= v2) ? v2 : v1)
+void	*ft_lstpop(t_list **head)
+{
+	t_list	*tmp;
+	void	*ret;
 
-#endif
+	if (!head || !*head)
+		return (NULL);
+	tmp = *head;
+	*head = (*head)->next;
+	ret = tmp->content;
+	free(tmp);
+	return (ret);
+}

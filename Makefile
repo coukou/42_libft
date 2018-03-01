@@ -25,6 +25,7 @@ OFILES += $(addprefix conversion/, \
 OFILES += $(addprefix list/, \
 	ft_lstadd.o ft_lstadd_back.o ft_lstdel.o ft_lstdelone.o \
 	ft_lstiter.o ft_lstmap.o ft_lstnew.o ft_lst_mergesort.o \
+	ft_lstpop.o \
 )
 
 OFILES += $(addprefix math/, \
@@ -75,7 +76,7 @@ $(ODIR)/%.o: $(SDIR)/%.c
 	$(CC) -c $(INC) -o $@ $< $(CFLAGS)
 
 $(NAME): $(OBJS)
-	ar rvs $(NAME) $^
+	ar rs $(NAME) $^
 
 all: $(NAME)
 
