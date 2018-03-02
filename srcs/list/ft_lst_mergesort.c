@@ -6,15 +6,17 @@
 /*   By: spopieul <spopieul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/16 11:34:00 by orenkay           #+#    #+#             */
-/*   Updated: 2018/02/28 15:59:20 by spopieul         ###   ########.fr       */
+/*   Updated: 2018/03/02 15:56:30 by spopieul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft/list.h"
 
-static t_list	*ft_lst_merge(t_list *a, t_list *b, int reverse, int (*cmp)(void*, void*))
+static t_list	*ft_lst_merge(t_list *a, t_list *b, int reverse,
+								int (*cmp)(void*, void*))
 {
 	int cond;
+
 	if (a == NULL)
 		return (b);
 	else if (b == NULL)
@@ -58,7 +60,8 @@ static void		ft_lst_midsplit(t_list *head, t_list **a, t_list **b)
 	}
 }
 
-void			ft_lst_mergesort(t_list **head, int reverse, int (*cmp)(void*, void*))
+void			ft_lst_mergesort(t_list **head, int reverse,
+									int (*cmp)(void*, void*))
 {
 	t_list *a;
 	t_list *b;

@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   format2.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: orenkay <orenkay@student.42.fr>            +#+  +:+       +#+        */
+/*   By: spopieul <spopieul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/13 17:46:10 by spopieul          #+#    #+#             */
-/*   Updated: 2018/03/01 12:28:03 by orenkay          ###   ########.fr       */
+/*   Updated: 2018/03/02 15:56:46 by spopieul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./includes/ft_printf.h"
-
 
 void		ft_pf_format_s(t_pf_state *state)
 {
